@@ -1,12 +1,12 @@
 
 # Create secret from a string literal(s)
 
-`kubectl create secret generic my-db-secret --from-literal=DB_ROOT_USER=db_admin_root --from-literal=DB_ROOT_PWD=secret-db-pass`
-```
+```kubectl create secret generic my-db-secret --from-literal=DB_ROOT_USER=db_admin_root --from-literal=DB_ROOT_PWD=secret-db-pass```
+`
 secret/my-db-secret created
-```
+`
 
-`kubectl get secret my-db-secret`
+```kubectl get secret my-db-secret```
 ```
 NAME                  TYPE                                  DATA   AGE
 my-db-secret          Opaque                                2      6s
