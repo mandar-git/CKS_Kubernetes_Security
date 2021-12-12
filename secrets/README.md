@@ -81,17 +81,23 @@ stringData:
   username: db-admin
   password: my-secret-d8-p@ssw0rd
 ```
+```
 kubectl create -f secret.yaml
 ```
-secret/test-secret created
+`secret/test-secret created`
+
 ```
-`kubectl get secret test-secret`
+`kubectl get secret test-secret
+```
 ```
 NAME          TYPE                       DATA   AGE
 test-secret   kubernetes.io/basic-auth   2      17s
 ```
 
-`kubectl get secret test-secret -o yaml`
+```
+kubectl get secret test-secret -o yaml
+```
+
 ```
 apiVersion: v1
 data:
@@ -166,6 +172,7 @@ writing new private key to 'mytls.key'
 
 
 `ls`
+
 `mytls.crt  mytls.key`
 
 
