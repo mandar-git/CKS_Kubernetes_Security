@@ -98,8 +98,8 @@ type: kubernetes.io/basic-auth
 ```
  
 # Create secret from file(s)
-echo -n 'test-user' > user
-echo -n 'secret-p@ssw0rd' > passwd
+`echo -n 'test-user' > user`
+`echo -n 'secret-p@ssw0rd' > passwd`
 
 `kubectl create secret generic file-secret --from-file=user --from-file=passwd`
 ```
