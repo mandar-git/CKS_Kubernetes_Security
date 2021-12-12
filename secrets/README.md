@@ -122,14 +122,15 @@ kubectl create secret generic file-secret --from-file=user --from-file=passwd
 ```
 kubectl get secret file-secret
 ```
-```
+
 `
 NAME          TYPE     DATA   AGE
 file-secret   Opaque   2      18s
 `
 
-`kubectl get secret file-secret -o yaml
-
+```
+kubectl get secret file-secret -o yaml
+```
 `
 apiVersion: v1
 data:
@@ -166,18 +167,15 @@ writing new private key to 'mytls.key'
 -----
 ```
 
-```
-ls
-```
-`mytls.crt  mytls.key` 
 
+`ls`
+
+`mytls.crt  mytls.key` 
 
 ```
 kubectl create secret tls my-tls-secret --cert=mytls.crt --key=mytls.key -n default
 ```
-
 `secret/my-tls-secret created`
-
 ```
 kubectl get secret
 ```
@@ -189,7 +187,6 @@ my-tls-secret         kubernetes.io/tls                     2      4s
 ```
 kubectl describe secret my-tls-secret
 ```
-
 ```
 Name:         my-tls-secret
 Namespace:    default
