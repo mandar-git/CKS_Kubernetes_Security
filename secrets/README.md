@@ -112,26 +112,21 @@ type: kubernetes.io/basic-auth
 echo -n 'test-user' > user
 echo -n 'secret-p@ssw0rd' > passwd
 ```
-
 ```
 kubectl create secret generic file-secret --from-file=user --from-file=passwd
 ```
-```
 `secret/file-secret created`
-
 ```
 kubectl get secret file-secret
 ```
 
-`
+```
 NAME          TYPE     DATA   AGE
 file-secret   Opaque   2      18s
-`
+```
 
 ```
 kubectl get secret file-secret -o yaml
-```
-`
 apiVersion: v1
 data:
   pwd.txt: c2VjcmV0LXBAc3N3MHJk
@@ -144,22 +139,23 @@ metadata:
   resourceVersion: "7093"
   uid: 07ecde6a-6d5c-4fc1-be2e-d04cfd0dd599
 type: Opaque
-`
+```
 
 # Retrieve secret data fields (in base64 encoded)
   
  ```
-`kubectl get secret file-secret -o jsonpath='{.data}'`
+kubectl get secret file-secret -o jsonpath='{.data
 ```
 `{"pwd.txt":"c2VjcmV0LXBAc3N3MHJk","user.txt":"dGVzdC11c2Vy"}`
 
 
 # Create a secret to be used for TLS
 
+
 ```
-openssl req -x509 -new -nodes -keyout mytls.key -out mytls.crt -subj "/CN=mydomain.test"
-```
-```
+`openssl req -x509 -new -nodes -keyout mytls.key -out mytls.crt -subj "/CN=mydomain.test"`
+
+
 Generating a RSA private key
 ..............+++++
 .....................................+++++
@@ -187,6 +183,7 @@ my-tls-secret         kubernetes.io/tls                     2      4s
 ```
 kubectl describe secret my-tls-secret
 ```
+
 ```
 Name:         my-tls-secret
 Namespace:    default
