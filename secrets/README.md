@@ -17,7 +17,7 @@ my-db-secret          Opaque                                2      6s
 ```
 kubectl get secret my-db-secret -o yaml
 ```
-`
+```
 apiVersion: v1
 data:
   DB_ROOT_PWD: c2VjcmV0LWRiLXBhc3M=
@@ -30,7 +30,7 @@ metadata:
   resourceVersion: "2281"
   uid: 72710505-3a2b-400a-8c62-42661728d625
 type: Opaque
-`
+```
 
 ```
 kubectl describe secret my-db-secret
