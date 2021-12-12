@@ -166,9 +166,8 @@ writing new private key to 'mytls.key'
 
 
 `ls`
-```
-mytls.crt  mytls.key
-```
+`mytls.crt  mytls.key`
+
 
 ```
 kubectl create secret tls my-tls-secret --cert=mytls.crt --key=mytls.key -n default
