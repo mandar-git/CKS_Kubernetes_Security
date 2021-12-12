@@ -6,7 +6,6 @@
 secret/my-db-secret created
 ```
 
-
 `kubectl get secret my-db-secret`
 ```
 NAME                  TYPE                                  DATA   AGE
